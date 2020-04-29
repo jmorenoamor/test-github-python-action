@@ -4,19 +4,13 @@ import logging
 
 def main():
 
-    my_input = os.getenv("INPUT_MYINPUT", "default")
+    input_parameter = os.getenv("INPUT_PARAMETER")
 
-    my_output = f"Probando Hello {my_input}"
+    print("::debug::Debug message to action")
+    print("::warning::Warning message to action")
+    print("::error::Error message to action " + input_parameter)
 
-    print(f"::set-output name=myOutput::{my_output}")
-    print(f"::set-output name=myOutput::{my_output}")
-    print(f"::set-output name=myOutput::{my_output}")
-
-    print("::set-output name=myOutput::Test message")
-
-    print("::warning file=app.js,line=1,col=5::Missing semicolon")
-    print("::debug file=app.js,line=1::Entered octocatAddition method")
-    print("::error file=app.js,line=10,col=15::Something went wrong")
+    print("::set-output name=result::OK")
 
 if __name__ == "__main__":
 
@@ -25,5 +19,5 @@ if __name__ == "__main__":
     main()
 
     logger.debug("Debug message")
-    logger.info("Debug message")
-    logger.error("Debug message")
+    logger.info("Info message")
+    logger.error("Error message")

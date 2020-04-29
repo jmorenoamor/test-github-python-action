@@ -2,9 +2,12 @@ name: 'Container Action Template'
 description: 'Get started with Container actions'
 author: 'GitHub'
 inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+  parameter:
+    description: 'An input parameter'
+    default: 'example'
+outputs:
+  result:
+    description: "Result of the action"
 runs:
   using: 'docker'
   image: 'Dockerfile'
