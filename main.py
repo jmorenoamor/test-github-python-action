@@ -10,6 +10,14 @@ def main():
     print("::warning::Warning message to action")
     print("::error::Error message to action " + input_parameter)
 
+    long_string = """
+    Linea 1
+    Línea 2
+    Línea 3
+    """
+
+    print("::warning::" + long_string)
+
     print("::set-output name=result::OK")
 
 if __name__ == "__main__":
