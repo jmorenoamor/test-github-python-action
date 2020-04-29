@@ -14,6 +14,10 @@ def main():
 
     print("::set-output name=myOutput::Test message")
 
+	print("::warning file=app.js,line=1,col=5::Missing semicolon")
+	print("::debug file=app.js,line=1::Entered octocatAddition method")
+	print("::error file=app.js,line=10,col=15::Something went wrong")
+
 if __name__ == "__main__":
 
     logger = logging.getLogger(__name__)
